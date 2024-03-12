@@ -1,0 +1,1777 @@
+Program.Sub.ScreenSU.Start
+Gui.frmQte..Create
+Gui.frmQte..Caption("Quick Quote/Sales Order Metals")
+Gui.frmQte..Size(7590,8310)
+Gui.frmQte..MinX(7590)
+Gui.frmQte..MinY(8310)
+Gui.frmQte..Position(0,0)
+Gui.frmQte..BackColor(-2147483633)
+Gui.frmQte..MousePointer(0)
+Gui.frmQte..Event(UnLoad,frmQte_UnLoad)
+Gui.frmQte.frameSel.Create(Frame)
+Gui.frmQte.frameSel.Size(2205,435)
+Gui.frmQte.frameSel.Position(60,-15)
+Gui.frmQte.optOrd.Create(Option)
+Gui.frmQte.optOrd.Size(1245,255)
+Gui.frmQte.optOrd.Position(930,135)
+Gui.frmQte.optOrd.Parent("frameSel")
+Gui.frmQte.optOrd.Caption("Sales Order")
+Gui.frmQte.optOrd.TabStop(True)
+Gui.frmQte.optOrd.TabIndex(2)
+Gui.frmQte.optOrd.Event(Click,Selections)
+Gui.frmQte.optQte.Create(Option)
+Gui.frmQte.optQte.Size(810,255)
+Gui.frmQte.optQte.Position(60,135)
+Gui.frmQte.optQte.Parent("frameSel")
+Gui.frmQte.optQte.Caption("Quote")
+Gui.frmQte.optQte.TabStop(True)
+Gui.frmQte.optQte.TabIndex(1)
+Gui.frmQte.optQte.Event(Click,Selections)
+Gui.frmQte.frameInfo.Create(Frame)
+Gui.frmQte.frameInfo.Size(7335,3330)
+Gui.frmQte.frameInfo.Position(60,435)
+Gui.frmQte.txtF3.Create(TextBox,"",True,1215,300,0,2610,2280,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtF3.Parent("frameInfo")
+Gui.frmQte.txtF3.TabStop(True)
+Gui.frmQte.txtF3.TabIndex(19)
+Gui.frmQte.txtF1.Create(TextBox,"",True,1215,300,0,60,2280,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtF1.Parent("frameInfo")
+Gui.frmQte.txtF1.TabStop(True)
+Gui.frmQte.txtF1.TabIndex(17)
+Gui.frmQte.txtQty.Create(TextBox,"",True,720,300,0,5955,1665,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtQty.Parent("frameInfo")
+Gui.frmQte.txtQty.TabStop(True)
+Gui.frmQte.txtQty.TabIndex(16)
+Gui.frmQte.txtF2.Create(TextBox,"",True,1215,300,0,1335,2280,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtF2.Parent("frameInfo")
+Gui.frmQte.txtF2.TabStop(True)
+Gui.frmQte.txtF2.TabIndex(18)
+Gui.frmQte.txtCust.Create(TextBox,"",False,360,300,0,4335,435,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtCust.Parent("frameInfo")
+Gui.frmQte.txtCust.TabStop(True)
+Gui.frmQte.txtCust.TabIndex(7)
+Gui.frmQte.txtMatlPrice.Create(TextBox,"",True,720,300,0,5190,1665,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtMatlPrice.Parent("frameInfo")
+Gui.frmQte.txtMatlPrice.TabStop(True)
+Gui.frmQte.txtMatlPrice.TabIndex(15)
+Gui.frmQte.txtTotPrice.Create(TextBox,"",True,1215,300,0,1335,2895,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtTotPrice.Parent("frameInfo")
+Gui.frmQte.txtTotPrice.TabStop(True)
+Gui.frmQte.txtTotPrice.TabIndex(23)
+Gui.frmQte.txtF4.Create(TextBox,"",True,1215,300,0,3885,2280,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtF4.Parent("frameInfo")
+Gui.frmQte.txtF4.TabStop(True)
+Gui.frmQte.txtF4.TabIndex(20)
+Gui.frmQte.txtTotWt.Create(TextBox,"",True,1215,300,0,60,2895,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtTotWt.Parent("frameInfo")
+Gui.frmQte.txtTotWt.TabStop(True)
+Gui.frmQte.txtTotWt.TabIndex(22)
+Gui.frmQte.txtTotWt.Locked(True)
+Gui.frmQte.cmdCust.Create(Button)
+Gui.frmQte.cmdCust.Size(345,345)
+Gui.frmQte.cmdCust.Position(2475,405)
+Gui.frmQte.cmdCust.Parent("frameInfo")
+Gui.frmQte.cmdCust.Caption("^")
+Gui.frmQte.cmdCust.Event(Click,cmdCust_Click)
+Gui.frmQte.cmdCust.TabStop(True)
+Gui.frmQte.cmdCust.TabIndex(4)
+Gui.frmQte.lblMatl.Create(Label,"Material",True,1560,255,0,60,1455,True,0,"Arial",8,-2147483633,0)
+Gui.frmQte.lblMatl.Parent("frameInfo")
+Gui.frmQte.cmdPart.Create(Button)
+Gui.frmQte.cmdPart.Size(345,345)
+Gui.frmQte.cmdPart.Position(1995,1020)
+Gui.frmQte.cmdPart.Parent("frameInfo")
+Gui.frmQte.cmdPart.Caption("^")
+Gui.frmQte.cmdPart.Event(Click,cmdPart_Click)
+Gui.frmQte.cmdPart.TabStop(True)
+Gui.frmQte.cmdPart.TabIndex(9)
+Gui.frmQte.lblPartDesc.Create(Label,"Part Description",True,2385,255,0,2370,855,True,0,"Arial",8,-2147483633,0)
+Gui.frmQte.lblPartDesc.Parent("frameInfo")
+Gui.frmQte.lblQty.Create(Label,"Quantity",True,735,255,0,5955,1455,True,0,"Arial",8,-2147483633,0)
+Gui.frmQte.lblQty.Parent("frameInfo")
+Gui.frmQte.lblPrice.Create(Label,"Price/LB",True,720,255,0,5190,1455,True,0,"Arial",8,-2147483633,0)
+Gui.frmQte.lblPrice.Parent("frameInfo")
+Gui.frmQte.lblFormula.Create(Label,"Formula",True,720,255,0,60,2070,True,0,"Arial",8,-2147483633,0)
+Gui.frmQte.lblFormula.Parent("frameInfo")
+Gui.frmQte.cmdCal.Create(Button)
+Gui.frmQte.cmdCal.Size(885,375)
+Gui.frmQte.cmdCal.Position(5145,2235)
+Gui.frmQte.cmdCal.Parent("frameInfo")
+Gui.frmQte.cmdCal.Caption("Calculate")
+Gui.frmQte.cmdCal.Event(Click,cmdCal_Click)
+Gui.frmQte.cmdCal.TabStop(True)
+Gui.frmQte.cmdCal.TabIndex(21)
+Gui.frmQte.lblTotWt.Create(Label,"Total Weight",True,1080,255,0,60,2685,True,0,"Arial",8,-2147483633,0)
+Gui.frmQte.lblTotWt.Parent("frameInfo")
+Gui.frmQte.lblTotPrice.Create(Label,"Total Price",True,1035,255,0,1335,2685,True,0,"Arial",8,-2147483633,0)
+Gui.frmQte.lblTotPrice.Parent("frameInfo")
+Gui.frmQte.cmdSave.Create(Button)
+Gui.frmQte.cmdSave.Size(735,375)
+Gui.frmQte.cmdSave.Position(2595,2850)
+Gui.frmQte.cmdSave.Parent("frameInfo")
+Gui.frmQte.cmdSave.Caption("Save")
+Gui.frmQte.cmdSave.Event(Click,cmdSave_Click)
+Gui.frmQte.cmdSave.TabStop(True)
+Gui.frmQte.cmdSave.TabIndex(24)
+Gui.frmQte.lblCustName.Create(Label,"Customer Name",True,2385,255,0,60,225,True,0,"Arial",8,-2147483633,0)
+Gui.frmQte.lblCustName.Parent("frameInfo")
+Gui.frmQte.txtPartDesc.Create(TextBox,"",True,2775,300,0,2370,1065,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtPartDesc.Parent("frameInfo")
+Gui.frmQte.txtPartDesc.TabStop(True)
+Gui.frmQte.txtPartDesc.TabIndex(10)
+Gui.frmQte.txtPartLoc.Create(TextBox,"",False,360,300,0,4725,435,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtPartLoc.Parent("frameInfo")
+Gui.frmQte.txtPartLoc.TabStop(True)
+Gui.frmQte.txtPartLoc.TabIndex(5)
+Gui.frmQte.txtMatlWeight.Create(TextBox,"",False,360,300,0,5505,435,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtMatlWeight.Parent("frameInfo")
+Gui.frmQte.txtMatlWeight.TabStop(True)
+Gui.frmQte.txtMatlWeight.TabIndex(6)
+Gui.frmQte.cmdDel.Create(Button)
+Gui.frmQte.cmdDel.Size(735,375)
+Gui.frmQte.cmdDel.Position(3375,2850)
+Gui.frmQte.cmdDel.Parent("frameInfo")
+Gui.frmQte.cmdDel.Caption("Delete")
+Gui.frmQte.cmdDel.Event(Click,cmdDel_Click)
+Gui.frmQte.cmdDel.TabStop(True)
+Gui.frmQte.cmdDel.TabIndex(25)
+Gui.frmQte.txtMatlDesc.Create(TextBox,"",True,2775,300,0,2370,1665,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtMatlDesc.Parent("frameInfo")
+Gui.frmQte.txtMatlDesc.TabStop(True)
+Gui.frmQte.txtMatlDesc.TabIndex(14)
+Gui.frmQte.txtMatlDesc.Locked(True)
+Gui.frmQte.lblMatlDesc.Create(Label,"Material Description",True,1560,255,0,2370,1455,True,0,"Arial",8,-2147483633,0)
+Gui.frmQte.lblMatlDesc.Parent("frameInfo")
+Gui.frmQte.lblPart.Create(Label,"Part Number",True,1560,255,0,60,840,True,0,"Arial",8,-2147483633,0)
+Gui.frmQte.lblPart.Parent("frameInfo")
+Gui.frmQte.cmdMatl.Create(Button)
+Gui.frmQte.cmdMatl.Size(345,345)
+Gui.frmQte.cmdMatl.Position(1995,1635)
+Gui.frmQte.cmdMatl.Parent("frameInfo")
+Gui.frmQte.cmdMatl.TabStop(True)
+Gui.frmQte.cmdMatl.TabIndex(13)
+Gui.frmQte.cmdMatl.Caption("^")
+Gui.frmQte.cmdMatl.Event(Click,cmdMatl_Click)
+Gui.frmQte.txtPartPL.Create(TextBox,"",True,465,300,0,5190,1065,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtPartPL.Parent("frameInfo")
+Gui.frmQte.txtPartPL.TabStop(True)
+Gui.frmQte.txtPartPL.TabIndex(11)
+Gui.frmQte.txtPartPL.MaxLength(2)
+Gui.frmQte.lblPL.Create(Label,"PL",True,330,255,0,5265,855,True,0,"Arial",8,-2147483633,0)
+Gui.frmQte.lblPL.Parent("frameInfo")
+Gui.frmQte.lblRouter.Create(Label,"Router",False,1905,255,0,4185,2685,True,0,"Arial",8,-2147483633,0)
+Gui.frmQte.lblRouter.Parent("frameInfo")
+Gui.frmQte.cmdRouter.Create(Button)
+Gui.frmQte.cmdRouter.Visible(False)
+Gui.frmQte.cmdRouter.Size(345,345)
+Gui.frmQte.cmdRouter.Position(6045,2865)
+Gui.frmQte.cmdRouter.Parent("frameInfo")
+Gui.frmQte.cmdRouter.TabStop(True)
+Gui.frmQte.cmdRouter.TabIndex(27)
+Gui.frmQte.cmdRouter.Caption("^")
+Gui.frmQte.cmdRouter.Event(Click,cmdRouter_Click)
+Gui.frmQte.chkSched.Create(CheckBox)
+Gui.frmQte.chkSched.Visible(False)
+Gui.frmQte.chkSched.Size(255,360)
+Gui.frmQte.chkSched.Position(6735,2865)
+Gui.frmQte.chkSched.Parent("frameInfo")
+Gui.frmQte.chkSched.TabStop(True)
+Gui.frmQte.chkSched.TabIndex(28)
+Gui.frmQte.lblSched.Create(Label,"Sched WO?",False,975,255,0,6345,2730,True,0,"Arial",8,-2147483633,0)
+Gui.frmQte.lblSched.Parent("frameInfo")
+Gui.frmQte.txtMatlLoc.Create(TextBox,"",False,360,300,0,5115,435,True,0,"Arial",8,-2147483643,1)
+Gui.frmQte.txtMatlLoc.Parent("frameInfo")
+Gui.frmQte.txtMatlLoc.TabStop(True)
+Gui.frmQte.txtMatlLoc.TabIndex(5)
+Gui.frmQte.cboCustName.Create(ComboBox)
+Gui.frmQte.cboCustName.Size(2385,330)
+Gui.frmQte.cboCustName.Position(60,435)
+Gui.frmQte.cboCustName.Parent("frameInfo")
+Gui.frmQte.cboCustName.Event(LostFocus,cboCustName_LostFocus)
+Gui.frmQte.cboCustName.TabStop(True)
+Gui.frmQte.cboCustName.TabIndex(3)
+Gui.frmQte.cboPart.Create(ComboBox)
+Gui.frmQte.cboPart.Size(1920,330)
+Gui.frmQte.cboPart.Position(60,1050)
+Gui.frmQte.cboPart.Parent("frameInfo")
+Gui.frmQte.cboPart.Event(LostFocus,cboPart_LostFocus)
+Gui.frmQte.cboPart.TabStop(True)
+Gui.frmQte.cboPart.TabIndex(8)
+Gui.frmQte.cboMatl.Create(ComboBox)
+Gui.frmQte.cboMatl.Size(1920,330)
+Gui.frmQte.cboMatl.Position(60,1665)
+Gui.frmQte.cboMatl.Parent("frameInfo")
+Gui.frmQte.cboMatl.Event(LostFocus,cboMatl_LostFocus)
+Gui.frmQte.cboMatl.TabStop(True)
+Gui.frmQte.cboMatl.TabIndex(12)
+Gui.frmQte.cboRouter.Create(ComboBox)
+Gui.frmQte.cboRouter.Size(1845,330)
+Gui.frmQte.cboRouter.Position(4185,2895)
+Gui.frmQte.cboRouter.Parent("frameInfo")
+Gui.frmQte.cboRouter.Visible(False)
+Gui.frmQte.cboRouter.TabStop(True)
+Gui.frmQte.cboRouter.TabIndex(26)
+Gui.frmQte.dtpDueDate.Create(DatePicker)
+Gui.frmQte.dtpDueDate.Size(1425,285)
+Gui.frmQte.dtpDueDate.Position(2880,435)
+Gui.frmQte.dtpDueDate.Parent("frameInfo")
+Gui.frmQte.lblDueDate.Create(Label,"Due Date",True,1140,255,0,2880,225,True,0,"Arial",8,-2147483633,0)
+Gui.frmQte.lblDueDate.Parent("frameInfo")
+Gui.frmQte.frameLines.Create(Frame)
+Gui.frmQte.frameLines.Size(7335,3765)
+Gui.frmQte.frameLines.Position(60,3780)
+Gui.frmQte.frameLines.Anchor(15)
+Gui.frmQte.GsGCLines.Create(GsGridControl)
+Gui.frmQte.GsGCLines.Size(7215,3510)
+Gui.frmQte.GsGCLines.Position(60,165)
+Gui.frmQte.GsGCLines.Parent("frameLines")
+Gui.frmQte.GsGCLines.Event(RowCellClick,GsGCLines_RowCellClick)
+Gui.frmQte.GsGCLines.Anchor(15)
+Gui.frmQte.cmdProcess.Create(Button)
+Gui.frmQte.cmdProcess.Size(855,375)
+Gui.frmQte.cmdProcess.Position(6540,7575)
+Gui.frmQte.cmdProcess.Caption("Process")
+Gui.frmQte.cmdProcess.Event(Click,cmdProcess_Click)
+Gui.frmQte.cmdProcess.TabStop(True)
+Gui.frmQte.cmdProcess.TabIndex(21)
+Gui.frmQte.cmdProcess.Anchor(10)
+Gui.frmQte.lblStatus.Create(Label,"***Change***",False,6375,240,0,60,7680,True,0,"Arial",10,-2147483633,0)
+Gui.frmQte.lblStatus.Anchor(6)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+	Program.External.Include.Library("200801.lib")
+	V.Global.iLines.Declare
+	V.Global.iRetLines.Declare
+	V.Global.iRow.Declare
+	V.Global.iWOSeq.Declare
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sIcon.Declare
+
+	Gui.frmQte..ApplyTranslation
+
+	F.Intrinsic.String.Build("{0}\GSS2.ico",V.Caller.GasDir,v.Local.sIcon)
+	Gui.frmQte..Icon(V.Local.sIcon)
+
+	F.ODBC.Connection!con.OpenCompanyConnection(300)
+	
+	'Get WO Seq Numbering
+	F.Global.General.ReadOption(401113,3,-1,0000,V.Global.iWOSeq)
+	
+	V.Global.iRetLines.Set(0)
+	Gui.frmQte.optQte.Value(True)
+	Gui.frmQte.txtMatlPrice.Text("0.00")
+	Gui.frmQte.txtQty.Text("1.00")
+	Gui.frmQte.txtTotWt.Text("0.00")
+	Gui.frmQte.txtTotPrice.Text("0.00")
+	Gui.frmQte.txtMatlWeight.Text("0.00")
+	Gui.frmQte..Show
+	
+	F.Intrinsic.Control.CallSub(AutoComplete)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.frmQte_UnLoad.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.ODBC.Connection!con.Close
+	F.Intrinsic.Control.End 
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmQte_UnLoad.End
+
+Program.Sub.AutoComplete.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmQte.lblStatus.Caption("Loading Type Aheads....")
+	Gui.frmQte.lblStatus.Visible(True)
+
+	'Customer
+	F.Data.DataTable.CreateFromSQL("dtCust","con","Select Customer,Name_Customer From V_Customer_Master;",True)
+	F.Data.Dictionary.CreateFromDataTable("dicCust","dtCust","Name_Customer","Name_Customer",2)
+	Gui.frmQte.cboCustName.AddItems("Dictionary","dicCust")
+	
+	'Part Number
+	F.Data.DataTable.CreateFromSQL("dtPart","con","Select Part,Location,Description,Product_Line,Amt_Price From V_Inventory_Mstr;",True)
+	F.Data.Dictionary.CreateFromDataTable("dicPart","dtPart","Part","Part",2)
+	Gui.frmQte.cboPart.AddItems("Dictionary","dicPart")
+	Gui.frmQte.cboMatl.AddItems("Dictionary","dicPart")
+	
+	F.Data.DataTable.CreateFromSQL("dtPart2","con","Select Part,Wt_Per_Foot From V_Inventory_Mst2;",True)
+	
+	'Router
+	F.Data.DataTable.CreateFromSQL("dtRouterA","con","Select Router,Router From V_Router_Header;",True)
+	F.Data.Dictionary.CreateFromDataTable("dicRouter","dtRouterA","Router","Router",2)
+	Gui.frmQte.cboRouter.AddItems("Dictionary","dicRouter")
+	
+	Gui.frmQte.lblStatus.Visible(False)
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.AutoComplete.End
+
+Program.Sub.Clear.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmQte.txtCust.Locked(True)
+	Gui.frmQte.cboPart.Text("")
+	Gui.frmQte.txtPartDesc.Text("")
+	Gui.frmQte.txtPartPL.Text("")
+	Gui.frmQte.cboMatl.Text("")
+	Gui.frmQte.txtMatlDesc.Text("")
+	Gui.frmQte.txtMatlPrice.Text("0.00")
+	Gui.frmQte.txtQty.Text("1.00")
+	Gui.frmQte.txtF1.Text("")
+	Gui.frmQte.txtF2.Text("")
+	Gui.frmQte.txtF3.Text("")
+	Gui.frmQte.txtF4.Text("")
+	Gui.frmQte.txtTotWt.Text("0.00")
+	Gui.frmQte.txtTotPrice.Text("0.00")
+	Gui.frmQte.txtLoc.Text("")
+	Gui.frmQte.txtMatlWeight.Text("0.00")
+	Gui.frmQte.cboRouter.Text("")
+	Gui.frmQte.chkSched.Value(0)
+	V.Global.iRetLines.Set(0)
+	V.Global.iRow.Set(-1)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Clear.End
+
+Program.Sub.Selections.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	F.Intrinsic.Control.If(V.Screen.frmQte!optOrd.Value)
+		Gui.frmQte.lblRouter.Visible(True)
+		Gui.frmQte.cboRouter.Visible(True)
+		Gui.frmQte.cmdRouter.Visible(True)
+		Gui.frmQte.lblSched.Visible(True)
+		Gui.frmQte.chkSched.Visible(True)
+	F.Intrinsic.Control.Else
+		Gui.frmQte.lblRouter.Visible(False)
+		Gui.frmQte.cboRouter.Visible(False)
+		Gui.frmQte.cmdRouter.Visible(False)
+		Gui.frmQte.lblSched.Visible(False)
+		Gui.frmQte.chkSched.Visible(False)
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Selections.End
+
+Program.Sub.cmdCust_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sRet.Declare
+
+	F.Intrinsic.Control.If(V.DataTable.dtLines.Exists)
+		F.Intrinsic.Control.If(V.DataTable.dtLines.RowCount,<>,0)
+			F.Intrinsic.UI.Msgbox("You can only select 1 customer per Quote/Sales Order creation.","Quick Quote/Sales Order Metals")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.UI.Browser(205,"",V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		Gui.frmQte.txtCust.Text(V.Local.sRet(0))
+		Gui.frmQte.cboCustName.Caption(V.Local.sRet(1))
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdCust_Click.End
+
+Program.Sub.cmdPart_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sRet.Declare
+	V.Local.sRet2.Declare
+	V.Local.sSql.Declare
+
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.UI.Browser(105,"",V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		Gui.frmQte.cboPart.Text(V.Local.sRet(0))
+		Gui.frmQte.txtPartLoc.Text(V.Local.sRet(1))
+		Gui.frmQte.txtPartDesc.Caption(V.Local.sRet(2))
+		Gui.frmQte.txtPartPL.Caption(V.Local.sRet(3))
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdPart_Click.End
+
+Program.Sub.cmdMatl_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sRet.Declare
+	V.Local.sRet2.Declare
+	V.Local.sSql.Declare
+
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.UI.Browser(105,"",V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		Gui.frmQte.cboMatl.Text(V.Local.sRet(0).Trim)
+		Gui.frmQte.txtMatlLoc.Text(V.Local.sRet(1).Trim)
+		Gui.frmQte.txtMatlDesc.Caption(V.Local.sRet(2).Trim)
+		F.Intrinsic.String.Build("Select Amt_Price From Inventory_Mstr Where Part = '{0}' And Location = '{1}'; ",V.Local.sRet(0).Trim,V.Local.sRet(1).Trim,V.Local.sSql)
+		F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSql,V.Local.sRet2)
+		Gui.frmQte.txtMatlPrice.Text(V.Local.sRet2)
+		F.Intrinsic.String.Build("Select Wt_Per_Foot From Inventory_Mst2 Where Part = '{0}' And Location = '{1}'; ",V.Local.sRet(0).Trim,V.Local.sRet(1).Trim,V.Local.sSql)
+		F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSql,V.Local.sRet2)
+		Gui.frmQte.txtMatlWeight.Text(V.Local.sRet2)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdMatl_Click.End
+
+Program.Sub.cmdRouter_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sRet.Declare
+	V.Local.sRet2.Declare
+	V.Local.sSql.Declare
+
+	F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	F.Intrinsic.UI.Browser(2705,"",V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		Gui.frmQte.cboRouter.Text(V.Local.sRet(0).Trim)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdRouter_Click.End
+
+Program.Sub.cmdCal_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.iCnt.Declare
+	V.Local.fValue.Declare
+	V.Local.fWeight.Declare
+
+	V.Local.fWeight.Set(V.Screen.frmQte!txtMatlWeight.Text)
+	
+	F.Intrinsic.Control.For(V.Local.iCnt,1,4,1)
+		F.Intrinsic.Control.If(V.Screen.frmQte!txtF[V.Local.iCnt].Text,<>,"")
+			F.Intrinsic.Math.Mult(V.Local.fWeight,V.Screen.frmQte!txtF[V.Local.iCnt].Text,V.Local.fWeight)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iCnt)
+
+	F.Intrinsic.Control.If(V.Local.fWeight,<>,0)
+		F.Intrinsic.Math.Mult(V.Local.fWeight,V.Screen.frmQte!txtQty.Text,V.Local.fWeight)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Math.Mult(V.Screen.frmQte!txtQty.Text,V.Screen.frmQte!txtMatlWeight.Text,V.Local.fWeight)
+	F.Intrinsic.Control.EndIf
+	Gui.frmQte.txtTotWt.Text(V.Local.fWeight)
+	
+	F.Intrinsic.Math.Mult(V.Screen.frmQte!txtTotWt.Text,V.Screen.frmQte!txtMatlPrice.Text,V.Local.fValue)
+	Gui.frmQte.txtTotPrice.Text(V.Local.fValue)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdCal_Click.End
+
+Program.Sub.cmdSave_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.bSchedWO.Declare
+	
+	F.Intrinsic.Control.If(V.Screen.frmQte!txtCust.Text,<>,"")
+	F.Intrinsic.Control.AndIf(V.Screen.frmQte!cboPart.Text,<>,"")
+	F.Intrinsic.Control.AndIf(V.Screen.frmQte!cboMatl.Text,<>,"")
+		F.Intrinsic.Control.If(V.DataTable.dtLines.Exists,=,False)
+			V.Global.iLines.Set(1)
+			F.Data.DataTable.Create("dtLines",True)
+			F.Data.DataTable.AddColumn("dtLines","Line",String)
+			F.Data.DataTable.AddColumn("dtLines","Cust",String)
+			F.Data.DataTable.AddColumn("dtLines","CustName",String)
+			F.Data.DataTable.AddColumn("dtLines","Part",String)
+			F.Data.DataTable.AddColumn("dtLines","PartLoc",String)
+			F.Data.DataTable.AddColumn("dtLines","PartDesc",String)
+			F.Data.DataTable.AddColumn("dtLines","PartPL",String)
+			F.Data.DataTable.AddColumn("dtLines","Matl",String)
+			F.Data.DataTable.AddColumn("dtLines","MatlLoc",String)
+			F.Data.DataTable.AddColumn("dtLines","MatlDesc",String)
+			F.Data.DataTable.AddColumn("dtLines","MatlPrice",String)
+			F.Data.DataTable.AddColumn("dtLines","MatlWeight",String)
+			F.Data.DataTable.AddColumn("dtLines","Qty",Float)
+			F.Data.DataTable.AddColumn("dtLines","F1",String)
+			F.Data.DataTable.AddColumn("dtLines","F2",String)
+			F.Data.DataTable.AddColumn("dtLines","F3",String)
+			F.Data.DataTable.AddColumn("dtLines","F4",String)
+			F.Data.DataTable.AddColumn("dtLines","TotPrice",Float)
+			F.Data.DataTable.AddColumn("dtLines","TotWeight",Float)
+			F.Data.DataTable.AddColumn("dtLines","DueDate",Date)
+			F.Data.DataTable.AddColumn("dtLines","Router",String)
+			F.Data.DataTable.AddColumn("dtLines","SchedWO",Boolean)
+			
+			F.Intrinsic.Control.If(V.Screen.frmQte!chkSched.Value,=,0)
+				V.Local.bSchedWO.Set(False)
+			F.Intrinsic.Control.Else
+				V.Local.bSchedWO.Set(True)
+			F.Intrinsic.Control.EndIf
+			
+			F.Intrinsic.Control.If(V.Global.iRetLines,=,0)
+				F.Data.DataTable.AddRow("dtLines","Line",V.Global.iLines.Format000,"Cust",V.Screen.frmQte!txtCust.Text,"CustName",V.Screen.frmQte!cboCustName.Text,"Part",V.Screen.frmQte!cboPart.Text,"PartLoc",V.Screen.frmQte!txtPartLoc.Text,"PartDesc",V.Screen.frmQte!txtPartDesc.Text,"PartPL",V.Screen.frmQte!txtPartPL.Text,"Matl",V.Screen.frmQte!cboMatl.Text,"MatlLoc",V.Screen.frmQte!txtMatlLoc.Text,"MatlDesc",V.Screen.frmQte!txtMatlDesc.Text,"MatlPrice",V.Screen.frmQte!txtMatlPrice.Text,"MatlWeight",V.Screen.frmQte!txtMatlWeight.Text,"Qty",V.Screen.frmQte!txtQty.Text,"F1",V.Screen.frmQte!txtF1.Text,"F2",V.Screen.frmQte!txtF2.Text,"F3",V.Screen.frmQte!txtF3.Text,"F4",V.Screen.frmQte!txtF4.Text,"TotPrice",V.Screen.frmQte!txtTotPrice.Text,"TotWeight",V.Screen.frmQte!txtTotWt.Text,"DueDate",V.Screen.frmQte!dtpDueDate.Value,"Router",V.Screen.frmQte!cboRouter.Text,"SchedWO",V.Local.bSchedWO)
+			F.Intrinsic.Control.Else
+				F.Data.DataTable.SetValue("dtLines",V.Global.iRow,"Line",V.Global.iLines.Format000,"Cust",V.Screen.frmQte!txtCust.Text,"CustName",V.Screen.frmQte!cboCustName.Text,"Part",V.Screen.frmQte!cboPart.Text,"PartLoc",V.Screen.frmQte!txtPartLoc.Text,"PartDesc",V.Screen.frmQte!txtPartDesc.Text,"PartPL",V.Screen.frmQte!txtPartPL.Text,"Matl",V.Screen.frmQte!cboMatl.Text,"MatlLoc",V.Screen.frmQte!txtMatlLoc.Text,"MatlDesc",V.Screen.frmQte!txtMatlDesc.Text,"MatlPrice",V.Screen.frmQte!txtMatlPrice.Text,"MatlWeight",V.Screen.frmQte!txtMatlWeight.Text,"Qty",V.Screen.frmQte!txtQty.Text,"F1",V.Screen.frmQte!txtF1.Text,"F2",V.Screen.frmQte!txtF2.Text,"F3",V.Screen.frmQte!txtF3.Text,"F4",V.Screen.frmQte!txtF4.Text,"TotPrice",V.Screen.frmQte!txtTotPrice.Text,"TotWeight",V.Screen.frmQte!txtTotWt.Text,"DueDate",V.Screen.frmQte!dtpDueDate.Value,"Router",V.Screen.frmQte!cboRouter.Text,"SchedWO",V.Local.bSchedWO)
+			F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.CallSub(LoadGVLines)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Control.If(V.Screen.frmQte!chkSched.Value,=,0)
+				V.Local.bSchedWO.Set(False)
+			F.Intrinsic.Control.Else
+				V.Local.bSchedWO.Set(True)
+			F.Intrinsic.Control.EndIf
+			
+			F.Intrinsic.Control.If(V.Global.iRetLines,=,0)
+				V.Global.iLines.Set(1)
+				F.Data.DataTable.AddRow("dtLines","Line",V.Global.iLines.Format000,"Cust",V.Screen.frmQte!txtCust.Text,"CustName",V.Screen.frmQte!cboCustName.Text,"Part",V.Screen.frmQte!cboPart.Text,"PartLoc",V.Screen.frmQte!txtPartLoc.Text,"PartDesc",V.Screen.frmQte!txtPartDesc.Text,"PartPL",V.Screen.frmQte!txtPartPL.Text,"Matl",V.Screen.frmQte!cboMatl.Text,"MatlLoc",V.Screen.frmQte!txtMatlLoc.Text,"MatlDesc",V.Screen.frmQte!txtMatlDesc.Text,"MatlPrice",V.Screen.frmQte!txtMatlPrice.Text,"MatlWeight",V.Screen.frmQte!txtMatlWeight.Text,"Qty",V.Screen.frmQte!txtQty.Text,"F1",V.Screen.frmQte!txtF1.Text,"F2",V.Screen.frmQte!txtF2.Text,"F3",V.Screen.frmQte!txtF3.Text,"F4",V.Screen.frmQte!txtF4.Text,"TotPrice",V.Screen.frmQte!txtTotPrice.Text,"TotWeight",V.Screen.frmQte!txtTotWt.Text,"DueDate",V.Screen.frmQte!dtpDueDate.Value,"Router",V.Screen.frmQte!cboRouter.Text,"SchedWO",V.Local.bSchedWO)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.Math.Add(V.Global.iLines,1,V.Global.iLines)
+				F.Data.DataTable.SetValue("dtLines",V.Global.iRow,"Line",V.Global.iLines.Format000,"Cust",V.Screen.frmQte!txtCust.Text,"CustName",V.Screen.frmQte!cboCustName.Text,"Part",V.Screen.frmQte!cboPart.Text,"PartLoc",V.Screen.frmQte!txtPartLoc.Text,"PartDesc",V.Screen.frmQte!txtPartDesc.Text,"PartPL",V.Screen.frmQte!txtPartPL.Text,"Matl",V.Screen.frmQte!cboMatl.Text,"MatlLoc",V.Screen.frmQte!txtMatlLoc.Text,"MatlDesc",V.Screen.frmQte!txtMatlDesc.Text,"MatlPrice",V.Screen.frmQte!txtMatlPrice.Text,"MatlWeight",V.Screen.frmQte!txtMatlWeight.Text,"Qty",V.Screen.frmQte!txtQty.Text,"F1",V.Screen.frmQte!txtF1.Text,"F2",V.Screen.frmQte!txtF2.Text,"F3",V.Screen.frmQte!txtF3.Text,"F4",V.Screen.frmQte!txtF4.Text,"TotPrice",V.Screen.frmQte!txtTotPrice.Text,"TotWeight",V.Screen.frmQte!txtTotWt.Text,"DueDate",V.Screen.frmQte!dtpDueDate.Value,"Router",V.Screen.frmQte!cboRouter.Text,"SchedWO",V.Local.bSchedWO)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.CallSub(Clear)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdSave_Click.End
+
+Program.Sub.cmdDel_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.iCnt.Declare
+	V.Local.iLine.Declare
+
+	F.Intrinsic.Control.If(V.DataTable.dtLines.Exists,=,False)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.Global.iRow,=,-1)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.DataTable.dtLines.RowCount,<>,0)
+		F.Data.DataTable.DeleteRow("dtLines",V.Global.iRow)
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtLines.RowCount--,1)
+			F.Intrinsic.Math.Add(V.Local.iCnt,1,V.Local.iLine)
+			F.Data.DataTable.SetValue("dtLines",V.Local.iCnt,"Line",V.Local.iLine.Format000)
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+		F.Intrinsic.Control.CallSub(Clear)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdDel_Click.End
+
+Program.Sub.LoadGVLines.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmQte.GsGCLines.AddGridviewFromDatatable("gvLines","dtLines")
+	Gui.frmQte.GsGCLines.SuspendLayout()
+	Gui.frmQte.GsGCLines.SetGridViewProperty("gvLines","MultiSelect",True)
+	Gui.frmQte.GsGCLines.SetGridViewProperty("gvLines","AllowSort",True)
+	Gui.frmQte.GsGCLines.SetGridViewProperty("gvLines","AllowFilter",True)
+	Gui.frmQte.GsGCLines.SetGridViewProperty("gvLines","ReadOnly",True)
+	Gui.frmQte.GsGCLines.SetGridViewProperty("gvLines","Editable",False)
+	Gui.frmQte.GsGCLines.SetGridViewProperty("gvLines","OptionsDetailShowDetailTabs",False)
+	Gui.frmQte.GsGCLines.SetGridViewProperty("gvLines","OptionsViewShowGroupPanel",False)
+	Gui.frmQte.GsGCLines.SetGridViewProperty("gvLines","EnableAppearanceOddRow",True)
+	Gui.frmQte.GsGCLines.SetGridViewProperty("gvLines","OptionsViewColumnAutoWidth",False)
+
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Cust","Visible",False)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","CustName","Visible",False)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Matl","Visible",False)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlLoc","Visible",False)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlDesc","Visible",False)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlPrice","Visible",False)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlWeight","Visible",False)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F1","Visible",False)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F2","Visible",False)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F3","Visible",False)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F4","Visible",False)
+	F.Intrinsic.Control.If(V.Screen.frmQte!optQte.Value)
+		Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Router","Visible",False)
+		Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","SchedWO","Visible",False)
+	F.Intrinsic.Control.EndIf
+
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Line","Caption","Line")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Cust","Caption","Customer")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","CustName","Caption","Customer Name")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Part","Caption","Part")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","PartLoc","Caption","Part Loc")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","PartDesc","Caption","Part Desc")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","PartPL","Caption","Part PL")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Matl","Caption","Material")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlLoc","Caption","Matl Loc")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlDesc","Caption","Matl Desc")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlPrice","Caption","Matl Price")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlWeight","Caption","Matl Weight")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Qty","Caption","Qty")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F1","Caption","F1")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F2","Caption","F2")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F3","Caption","F3")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F4","Caption","F4")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","TotPrice","Caption","Tot Price")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","TotWeight","Caption","Tot Weight")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","DueDate","Caption","Due Date")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Router","Caption","Router")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","SchedWO","Caption","Sched WO")
+
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Line","MinWidth","40")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Cust","MinWidth","50")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","CustName","MinWidth","120")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Part","MinWidth","120")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","PartLoc","MinWidth","40")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","PartDesc","MinWidth","150")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","PartPL","MinWidth","40")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Matl","MinWidth","120")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlLoc","MinWidth","40")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlDesc","MinWidth","150")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlPrice","MinWidth","85")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlWeight","MinWidth","85")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Qty","MinWidth","85")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F1","MinWidth","50")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F2","MinWidth","50")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F3","MinWidth","50")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F4","MinWidth","50")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","TotPrice","MinWidth","85")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","TotWeight","MinWidth","85")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","DueDate","MinWidth","85")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Router","MinWidth","120")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","SchedWO","MinWidth","55")
+
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Line","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Cust","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","CustName","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Part","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","PartLoc","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","PartDesc","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","PartPL","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Matl","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlLoc","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlDesc","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlPrice","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlWeight","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Qty","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F1","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F2","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F3","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F4","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","TotPrice","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","TotWeight","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","DueDate","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Router","HeaderFontBold",True)
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","SchedWO","HeaderFontBold",True)
+	
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Line","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Cust","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","CustName","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Part","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","PartLoc","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","PartDesc","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","PartPL","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Matl","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlLoc","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlDesc","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlPrice","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlWeight","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Qty","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F1","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F2","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F3","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","F4","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","TotPrice","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","TotWeight","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","DueDate","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Router","HeaderHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","SchedWO","HeaderHAlignment","Center")
+	
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Line","CellHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Cust","CellHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","PartLoc","CellHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","PartPL","CellHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlLoc","CellHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","DueDate","CellHAlignment","Center")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","SchedWO","CellHAlignment","Center")
+	
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlPrice","DisplayCustomNumeric","#,###,##0.00")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","MatlWeight","DisplayCustomNumeric","#,###,##0.00")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","Qty","DisplayCustomNumeric","#,###,##0.00")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","TotPrice","DisplayCustomNumeric","#,###,##0.00")
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","TotWeight","DisplayCustomNumeric","#,###,##0.00")
+	
+	Gui.frmQte.GsGCLines.SetColumnProperty("gvLines","DueDate","DisplayCustomDateTime","d")
+
+	Gui.frmQte.GsGCLines.ResumeLayout()
+	Gui.frmQte.GsGCLines.MainView("gvLines")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadGVLines.End
+
+Program.Sub.GsGCLines_RowCellClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.bSchedWO.Declare
+	
+	F.Intrinsic.Control.If(V.Args.Clicks,=,2)
+		V.Global.iRow.Set(V.Args.RowIndex)
+		V.Global.iRetLines.Set(V.DataTable.dtLines(V.Args.RowIndex).Line!FieldVal)
+		Gui.frmQte.cboPart.Text(V.DataTable.dtLines(V.Args.RowIndex).Part!FieldValTrim)
+		Gui.frmQte.txtPartLoc.Text(V.DataTable.dtLines(V.Args.RowIndex).PartLoc!FieldValTrim)
+		Gui.frmQte.txtPartDesc.Text(V.DataTable.dtLines(V.Args.RowIndex).PartDesc!FieldValTrim)
+		Gui.frmQte.txtPartPL.Text(V.DataTable.dtLines(V.Args.RowIndex).PartPL!FieldValTrim)
+		Gui.frmQte.cboMatl.Text(V.DataTable.dtLines(V.Args.RowIndex).Matl!FieldValTrim)
+		Gui.frmQte.txtMatlLoc.Text(V.DataTable.dtLines(V.Args.RowIndex).MatlLoc!FieldValTrim)
+		Gui.frmQte.txtMatlDesc.Text(V.DataTable.dtLines(V.Args.RowIndex).MatlDesc!FieldValTrim)
+		Gui.frmQte.txtMatlPrice.Text(V.DataTable.dtLines(V.Args.RowIndex).MatlPrice!FieldValTrim)
+		Gui.frmQte.txtMatlWeight.Text(V.DataTable.dtLines(V.Args.RowIndex).MatlWeight!FieldValTrim)
+		Gui.frmQte.txtQty.Text(V.DataTable.dtLines(V.Args.RowIndex).Qty!FieldValTrim)
+		Gui.frmQte.txtF1.Text(V.DataTable.dtLines(V.Args.RowIndex).F1!FieldValTrim)
+		Gui.frmQte.txtF2.Text(V.DataTable.dtLines(V.Args.RowIndex).F2!FieldValTrim)
+		Gui.frmQte.txtF3.Text(V.DataTable.dtLines(V.Args.RowIndex).F3!FieldValTrim)
+		Gui.frmQte.txtF4.Text(V.DataTable.dtLines(V.Args.RowIndex).F4!FieldValTrim)
+		Gui.frmQte.txtTotPrice.Text(V.DataTable.dtLines(V.Args.RowIndex).TotPrice!FieldValTrim)
+		Gui.frmQte.txtTotWt.Text(V.DataTable.dtLines(V.Args.RowIndex).TotWeight!FieldValTrim)
+		Gui.frmQte.cboRouter.Text(V.DataTable.dtLines(V.Args.RowIndex).Router!FieldValTrim)
+		F.Intrinsic.Control.If(V.DataTable.dtLines(V.Args.RowIndex).SchedWO!FieldValTrim)
+			Gui.frmQte.chkSched.Value(1)
+		F.Intrinsic.Control.Else
+			Gui.frmQte.chkSched.Value(0)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.GsGCLines_RowCellClick.End
+
+Program.Sub.cmdProcess_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	'Create Web Importer File and call ORDUPL to upload the Quote/Sales Order
+
+	V.Local.iCnt.Declare
+	V.Local.sRet.Declare
+	V.Local.sTemp.Declare
+	V.Local.sFileContents.Declare
+	V.Local.sFile.Declare
+	V.Local.sMoveFile.Declare
+	V.Local.sOrderNo.Declare
+	V.Local.sOrderLine.Declare
+	V.Local.sParams.Declare
+	V.Local.sSql.Declare
+	V.Local.bExists.Declare
+	V.Local.iRet.Declare
+	V.Local.iLineRtr.Declare
+
+	'Exit Sub if DataTable is Empty
+	F.Intrinsic.Control.If(V.DataTable.dtLines.Exists,=,False)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.DataTable.dtLines.RowCount,=,0)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	Gui.frmQte.lblStatus.Caption("Uploading Sales Order....")
+	Gui.frmQte.lblStatus.Visible(True)
+	Gui.frmQte.cmdProcess.Enabled(False)
+	Gui.frmQte.cmdSave.Enabled(False)
+
+	'Loop through dtLines and format before calling upload
+	'One each element , clear sRet first, this is incase that element is not used.
+	'When formatting each element of the datatable, return the final formatted element to 'v.local.sRet', it is already programmed to use that as the variable when building the file
+
+	'REQUIRED FILEDS ARE NOTED WITH "'***REQUIRED***
+	'***FIELD,Length,StartPosition-Description if Available
+
+	F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtLines.RowCount--,1)
+		'Transaction, 1,1 Transaction Code:  ""O"" for sales order or ""Q"" for Quote    '***REQUIRED***
+			F.Intrinsic.Control.If(V.Screen.frmQte!optQte.Value)
+				V.Local.sTemp.Set("Q")
+			F.Intrinsic.Control.Else
+				V.Local.sTemp.Set("O")
+			F.Intrinsic.Control.EndIf
+
+		'Customer, 7,2 Customer Number: '***REQUIRED*** unless using ordupmnu to choose customer id.
+			F.Intrinsic.String.RPad(V.DataTable.dtLines(V.Local.iCnt).Cust!FieldValTrim," ",7,V.Local.sRet)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+
+		'OrderNo, 7,9 If AutoNumbering Turned on can be left blank, otherwise a required field with leading zeros
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",15,V.Local.sTemp)
+
+		'Freight,10,16 Freight amount  8.2  Must enter numeric values with a filler of zeroes- do not use spaces. Example entry of 2.50     0000000250
+			V.Local.sRet.Set("")
+'			F.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.i)!Freight,"0.00",v.uGlobal.uOrders(v.Local.i)!Freight)
+'			F.Intrinsic.String.Replace(v.uGlobal.uOrders(v.Local.i)!Freight,".","",v.uGlobal.uOrders(v.Local.i)!Freight)
+'			F.Intrinsic.String.LPad(v.uGlobal.uOrders(v.Local.i)!Freight,"0",10,v.Local.sRet)
+			F.Intrinsic.String.LPad("","0",10,v.Local.sRet)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",25,V.Local.sTemp)
+
+		'Tax Freight Flag,1,26 Flag Y N or blank
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",26,V.Local.sTemp)
+
+		'Freight Per Piece,1,27 Flag Y N or blank
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",27,V.Local.sTemp)
+
+		'Order Due Date,8,28 CCYYMMDD   Example entry of Aug 5 2006     20060806
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Format(V.DataTable.dtLines(V.Local.iCnt).DueDate!FieldVal,"YYYYMMDD",V.Local.sRet)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",35,V.Local.sTemp)
+
+		'Order Date,8,36 CCYYMMDD   Example entry of Aug 5 2006     20060806
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Format(V.Ambient.Date,"YYYYMMDD",V.Local.sRet)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",43,V.Local.sTemp)
+
+		'User 1 Header,30,44 User Field for Header up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",73,V.Local.sTemp)
+
+		'User Field 2 Header,30,74 User Field for Header up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",103,V.Local.sTemp)
+
+		'User Field 3 Header,30,104 User Field for Header up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",133,V.Local.sTemp)
+
+		'User Field 4 Header,30,134 User Field for Header up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",163,V.Local.sTemp)
+
+		'User Field 5 Header,30,164 User Field for Header up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",193,V.Local.sTemp)
+
+		'UserId,8,194 User Field for Header up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,v.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",201,V.Local.sTemp)
+
+		'CustomerPO,15,202 User Field for Header up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",231,V.Local.sTemp)
+
+		'Filler_1,15,217,Not Used- Leave Blank
+
+		'Freight_CurrFlag,1,232,Y N or blank
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",232,V.Local.sTemp)
+
+		'Data Type,1,233,"""S"" for shipping data"
+			V.Local.sRet.Set("S")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",233,V.Local.sTemp)
+
+		'Ship Via,20,234
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,v.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",253,V.Local.sTemp)
+
+		'Carrier,6,254
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",259,V.Local.sTemp)
+
+		'Ship To Name,30,260
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",289,V.Local.sTemp)
+
+		'Ship To Address 1,30,290
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",319,V.Local.sTemp)
+
+		'Ship To Address 2,30,320
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",349,V.Local.sTemp)
+
+		'Ship To Address 3,30,350
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",379,V.Local.sTemp)
+
+		'Ship To City,25,380
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",404,V.Local.sTemp)
+
+		'Ship To State,2,405
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",406,V.Local.sTemp)
+
+		'Ship To Zip,13,407
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",419,V.Local.sTemp)
+
+		'Ship To Country,3,420
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",422,V.Local.sTemp)
+
+		'ShipToAttention,30,423
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",463,V.Local.sTemp)
+
+		'filler in reusable area,11,453,Not in Use
+
+		'Order type,1,464,"Regular = blank or spaces, Invoice = ""X"
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",464,V.Local.sTemp)
+
+		'Order Discount Percentage,5,465,1.4 with an implied decimal (example:  45% would show as 04500 in the file
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",469,V.Local.sTemp)
+
+		'Salesman,3,470,Salesman code within GSS
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",472,V.Local.sTemp)
+
+		'PAY-METHOD , 2,473
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",474,V.Local.sTemp)
+
+		'PAY-OWNER-NAME,30,475
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",504,V.Local.sTemp)
+
+		'PAY-CC-TYPE ,2,505
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",506,V.Local.sTemp)
+
+		'PAY-CC-NO , 25,507
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",531,V.Local.sTemp)
+
+		'PAY-CC-LENGTH , 2,532
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",533,V.Local.sTemp)
+
+		'PAY-CC-EXP-DT , 6,534
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",539,V.Local.sTemp)
+
+		'PAY-CC-CVV , 7, 540
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",546,V.Local.sTemp)
+
+		'PAY-CVV-LENGTH 1, 547 Numeric(1 or 0)
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",547,V.Local.sTemp)
+
+		'Override auto numbering,1,548,"Populate with ""1"" will override the auto ordering number with the number provided in the order number above
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",548,V.Local.sTemp)
+
+		'Ship To Id,6,549,"Optional, must be valid for customer
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",554,V.Local.sTemp)
+
+		'Mark Shipment,30,555
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",584,V.Local.sTemp)
+
+		'Contact Name,30,585
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",614,V.Local.sTemp)
+
+		'From Location, 2,615
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",701,V.Local.sTemp)
+
+		'Filler_3,85,617,Not in Use
+
+'************************************************************************************Line Data************************************************************************************
+		'Line Number,3,702,Not '***REQUIRED*** Valid input is 1 through 999
+			V.Local.sRet.Set(V.DataTable.dtLines(V.Local.iCnt).Line!FieldValTrim)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet.Format#,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",705,V.Local.sTemp)
+
+		'Filler_Line,1,705,Not Used- Leave Blank
+
+		'Qty Ordered,13,706,9.4; REQUIRED  Must enter numeric values with a filler or zeroes- do not enter spaces.  Example entry of 10  0000000100000
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Format(V.DataTable.dtLines(V.Local.iCnt).Qty!FieldVal,"0.0000",V.Local.sRet)
+			F.Intrinsic.String.Replace(V.Local.sRet,".","",V.Local.sRet)
+			F.Intrinsic.String.LPad(V.Local.sRet,"0",13,V.Local.sRet)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",718,V.Local.sTemp)
+
+		'Weight,10,719,7.3 Must enter numeric values with a filler of zeroes- do not use spaces. Example entry of 2.50 would be 0000002500
+			V.Local.sRet.Set("")
+			f.Intrinsic.String.Format(V.DataTable.dtLines(V.Local.iCnt).TotWeight!FieldVal,"0.000",V.Local.sRet)
+			f.Intrinsic.String.Replace(V.Local.sRet,".","",V.Local.sRet)
+			F.Intrinsic.String.LPad(V.Local.sRet,"0",10,V.Local.sRet)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",728,V.Local.sTemp)
+
+		'Unit Of Measure,2,729,Unit of Measure
+			V.Local.sRet.Set("EA")
+			F.Intrinsic.String.RPad(V.Local.sRet," ",2,V.Local.sRet)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",730,V.Local.sTemp)
+
+		'*** 20 Char Part# - PART, 20,731'***REQUIRED***
+		'Part Number,17,731,17 character part number
+		'Part Rev,3,748,'***REQUIRED*** if using part rev and a revision exists OR if NOT using part revision and part is longer than 17 characters long.
+			V.Local.sRet.Set(V.DataTable.dtLines(V.Local.iCnt).Part!FieldValTrim)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,v.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",768,V.Local.sTemp)
+
+		'Filler,18,751,Not in Use - Leave Blank
+
+		'Part Location,2,769,Location code
+			V.Local.sRet.Set(V.DataTable.dtLines(V.Local.iCnt).PartLoc!FieldValTrim)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",770,V.Local.sTemp)
+
+		'Quoted Price,16,771,10.6; REQUIRED in company currency.
+		'Make sure to fill in discount price even if no discounts apply.
+		'Enter leading zeros - do not enter spaces.   Example of 12.50 0000000012500000
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Format(V.DataTable.dtLines(V.Local.iCnt).TotPrice!FieldVal,"0.000000",v.Local.sRet)
+			F.Intrinsic.String.Replace(v.Local.sRet,".","",v.Local.sRet)
+			F.Intrinsic.String.LPad(V.Local.sRet,"0",16,V.Local.sRet)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",786,V.Local.sTemp)
+
+		'OverRidePrice,16,787,10.6; any price over-rides in company currency.
+		'Make sure to fill in discount price even if no discounts apply.
+		'Enter leading zeros - do not enter spaces.   Example of 12.50 0000000012500000
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",802,V.Local.sTemp)
+
+		'Cost,16,803,10.6; Cost of the Part in company currency.
+		'Enter leading zeros - do not enter spaces.   Example of 12.50  00000012500000
+			V.Local.sRet.Set("")
+'			F.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.i)!Cost,"0.000000",v.uGlobal.uOrders(v.Local.i)!Cost)
+'			F.Intrinsic.String.Replace(v.uGlobal.uOrders(v.Local.i)!Cost,".","",v.Local.sRet)
+			F.Intrinsic.String.LPad(V.Local.sRet,"0",16,V.Local.sRet)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",818,V.Local.sTemp)
+
+		'DescriptionPart,30,819,Description of the Part Number Length of 30
+			V.Local.sRet.Set(V.DataTable.dtLines(V.Local.iCnt).PartDesc!FieldValTrim)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",848,V.Local.sTemp)
+
+		'Product Line,3,849,Product Line of part number
+			V.Local.sRet.Set(V.DataTable.dtLines(V.Local.iCnt).PartPL!FieldValTrim)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",851,V.Local.sTemp)
+
+		'Line Order Date,8,852,CCYYMMDD  Example entry of Aug 5 2006     20060806
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Format(v.Ambient.Date,"YYYYMMDD",v.Local.sRet)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",859,V.Local.sTemp)
+
+		'Line Promise Date,8,860,CCYYMMDD  Example entry of Aug 5 2006     20060806
+		V.Local.sRet.Set("")
+		F.Intrinsic.String.Format(V.DataTable.dtLines(V.Local.iCnt).DueDate!FieldVal,"YYYYMMDD",v.Local.sRet)
+		F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+		F.Intrinsic.String.RPad(V.Local.sTemp," ",867,V.Local.sTemp)
+
+		'User Field 1,30,868,User Field forLine up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",897,V.Local.sTemp)
+
+		'User Field 2,30,898,User Field forLine up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",927,V.Local.sTemp)
+
+		'User Field 3,30,928,User Field forLine up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",957,V.Local.sTemp)
+
+		'User Field 4,30,958,User Field forLine up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",987,V.Local.sTemp)
+
+		'User Field 5,30,988,User Field forLine up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1017,V.Local.sTemp)
+
+		'Extention,16,1018,"10.6 in company currency.
+		'Leading zeros - no spaces or commas.  Example of 1,250.21  0000001250210000
+			V.Local.sRet.Set("")
+'			F.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.i)!Extention,"0.000000",v.uGlobal.uOrders(v.Local.i)!Extention)
+'			F.Intrinsic.String.Replace(v.uGlobal.uOrders(v.Local.i)!Extention,".","",v.Local.sRet)
+			F.Intrinsic.String.LPad(V.Local.sRet,"0",16,V.Local.sRet)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1033,V.Local.sTemp)
+
+		'No Delivery Before Date,8,1034,CCYYMMDD  Example entry of Aug 5 2006     20060806
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1041,V.Local.sTemp)
+
+		'Must Deliver By Date,8,1042,CCYYMMDD  Example entry of Aug 5 2006     20060806
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1049,V.Local.sTemp)
+
+		'vvv EXTRA TEXT vvv
+
+		'DataType,1,1050,"""T"" for sales order text
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,"",V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1050,V.Local.sTemp)
+
+		'Text Line 1,30,1051,Additional Text for Line up to 30 characters
+'			V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!TEXT_LINE1.Trim)
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1080,V.Local.sTemp)
+
+		'Text Line 2,30,1081,Additional Text for Line up to 30 characters
+'			V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!TEXT_LINE2.Trim)
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1110,V.Local.sTemp)
+
+		'Text Line 3,30,1111,Additional Text for Line up to 30 characters
+'			V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!TEXT_LINE3.Trim)
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1140,V.Local.sTemp)
+
+		'Text Line 4,30,1141,Additional Text for Line up to 30 characters
+'			V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!TEXT_LINE4.Trim)
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1170,V.Local.sTemp)
+
+		'Text Line 5,30,1171,Additional Text for Line up to 30 characters
+'			V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!TEXT_LINE5.Trim)
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1200,V.Local.sTemp)
+
+		'Text Line 6,30,1201,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1230,V.Local.sTemp)
+
+		'Text Line 7,30,1231,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1260,V.Local.sTemp)
+
+		'Text Line 8,30,1261,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1290,V.Local.sTemp)
+
+		'Text Line 9,30,1291,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1320,V.Local.sTemp)
+
+		'Text Line 10,30,1321,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1350,V.Local.sTemp)
+
+		'Tax Status Flag,1,1351,"""E"" for exempt, ""T"" for taxable
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1351,V.Local.sTemp)
+
+		'Line Type,1,1352,"""B"" for buyout, ""D"" for dropship, ""S"" for standard, ""C"" for consignment
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1352,V.Local.sTemp)
+
+		'Negative Flag,1,1353,"""1"" = The order qty is negative for this line."
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1353,V.Local.sTemp)
+
+		'Price Flag,1,1354,"""1"" = Accept zero price for this line.
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1354,V.Local.sTemp)
+
+		'Sufficient Inventory Check,1,1355,"""1"" = Check to make sure inventory level is sufficient for this line.
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1355,V.Local.sTemp)
+
+		'Survey No ,8,1356
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1363,V.Local.sTemp)
+
+		'Router Val Flag 1,1364
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1364,V.Local.sTemp)
+
+		'Router , 20,1365
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1384,V.Local.sTemp)
+
+		'Router Seq ,6,1385
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1390,V.Local.sTemp)
+
+		'STOCK-XREF, 1,1391
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1391,V.Local.sTemp)
+
+		'Origin Order ,7,1392
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1398,V.Local.sTemp)
+
+		'Origin Line,3,1399
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1401,V.Local.sTemp)
+
+		'Length ,12,1402 Numeric(8,4)
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1413,V.Local.sTemp)
+
+		'WIDTH ,12,1414 Numeric(8,4)
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1425,V.Local.sTemp)
+
+		'CURR-FLAG ,1,1426
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1426,V.Local.sTemp)
+
+		'Order Discount Percentage,5,1427,Order Line Discount format.
+		'The field contains 1 leading digit and four decimals.  So 00500 would be entered for a 5% discount.
+			V.Local.sRet.Set("")
+'			F.Intrinsic.Control.If(V.uGlobal.uOrders(v.Local.i)!Order_Disc_Pct.Trim,<>,"")
+'				F.Intrinsic.String.Split(V.uGlobal.uOrders(v.Local.i)!Order_Disc_Pct,".",V.Local.sRet)
+'				F.Intrinsic.String.RPad(V.Local.sRet(1),"0",4,V.Local.sRet)
+'			F.Intrinsic.Control.EndIf
+			F.Intrinsic.String.LPad(V.Local.sRet,"0",5,V.Local.sRet)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1517,V.Local.sTemp)
+
+		'Filler,86,1432,Not in Use - Leave Blank
+
+'************************************************************************************Extended Header Data************************************************************************************
+		'Ship To International Flag,1,1518,"""Y"" for international address, ""N"" or spaces for domestic address
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1518,V.Local.sTemp)
+
+		'Ship To Name,40,1519
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1558,V.Local.sTemp)
+
+		'Ship To Address 1,40,1559
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1598,V.Local.sTemp)
+
+		'Ship To Address 2,40,1599
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1638,V.Local.sTemp)
+
+		'Ship To Address 3,40,1639
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1678,V.Local.sTemp)
+
+		'Ship To Address 4,40,1679
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1718,V.Local.sTemp)
+
+		'Ship To Address 5,40,1719
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1758,V.Local.sTemp)
+
+		'Ship To City,25,1759
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1783,V.Local.sTemp)
+
+		'Ship To State,2,1784
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1785,V.Local.sTemp)
+
+		'Ship To Zip,13,1786
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1798,V.Local.sTemp)
+
+		'Ship To Country,25,1799
+				V.Local.sRet.Set("")
+				F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+				F.Intrinsic.String.RPad(V.Local.sTemp," ",1823,V.Local.sTemp)
+
+		'Ship To Attention,40,1824
+				V.Local.sRet.Set("")
+				F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+				F.Intrinsic.String.RPad(V.Local.sTemp," ",1863,V.Local.sTemp)
+
+'************************************************************************************Bill To Data************************************************************************************
+		'Bill To International Flag,1,1864,"""Y"" for international address, ""N"" or spaces for domestic address
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1864,V.Local.sTemp)
+
+		'Bill To Name,40,1865
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1904,V.Local.sTemp)
+
+		'Bill To Address 1,40,1905
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1943,V.Local.sTemp)
+
+		'Bill To Address 2,40,1945
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",1984,V.Local.sTemp)
+
+		'Bill To Address 3,40,1985
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2024,V.Local.sTemp)
+
+		'Bill To Address 4,40,2025
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2064,V.Local.sTemp)
+
+		'Bill To Address 5,40,2065
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2104,V.Local.sTemp)
+
+		'Bill To City,25,2105
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2129,V.Local.sTemp)
+
+		'Bill To State,2,2130
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2131,V.Local.sTemp)
+
+		'Bill To Zip,13,2132
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2144,V.Local.sTemp)
+
+		'Bill To Country,25,2145
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2169,V.Local.sTemp)
+
+		'Bill To Attention,40,2170
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2209,V.Local.sTemp)
+
+		'Contact's Email Address,100,2210
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2309,V.Local.sTemp)
+
+		'Contact's Phone,20,2310
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2329,V.Local.sTemp)
+
+'************************************************************************************Sales Order Header Text Data************************************************************************************
+		'Text Line 1,30,2330,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2359,V.Local.sTemp)
+
+		'Text Line 2,30,2360,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2389,V.Local.sTemp)
+
+		'Text Line 3,30,2390,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2419,V.Local.sTemp)
+
+		'Text Line 4,30,2420,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2449,V.Local.sTemp)
+
+		'Text Line 5,30,2450,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2479,V.Local.sTemp)
+
+		'Text Line 6,30,2480,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2509,V.Local.sTemp)
+
+		'Text Line 7,30,2510,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2539,V.Local.sTemp)
+
+		'Text Line 8,30,2540,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2569,V.Local.sTemp)
+
+		'Text Line 9,30,2570,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2599,V.Local.sTemp)
+
+		'Text Line 10,30,2600,Additional Text for Line up to 30 characters
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2629,V.Local.sTemp)
+
+		'Text Position,1,2630,"""H"" for header, ""F"" for footer
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2630,V.Local.sTemp)
+
+		'Apply Text to Sales Order,1,2631,"""Y"" to apply, ""N"" for do not apply
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2631,V.Local.sTemp)
+
+		'Apply Text to Packing List,1,2632,"""Y"" to apply, ""N"" for do not apply
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2632,V.Local.sTemp)
+
+		'Apply Text to Invoice,1,2633,"""Y"" to apply, ""N"" for do not apply
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2633,V.Local.sTemp)
+
+		'Apply Text to Quote,1,2634,"""Y"" to apply, ""N"" for do not apply
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2634,V.Local.sTemp)
+
+		'Apply Text to Router,1,2635,"""Y"" to apply, ""N"" for do not apply
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2636,V.Local.sTemp)
+
+		'Apply Text to Work Order,1,2636,"""Y"" to apply, ""N"" for do not apply
+			V.Local.sRet.Set("")
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+			F.Intrinsic.String.RPad(V.Local.sTemp," ",2637,V.Local.sTemp)
+
+		'Filler,1000,2637,Not in Use - Leave Blank
+
+		'Filler,1000,3637,Not in Use - Leave Blank
+
+		'***Total Record length of,4565 if all used
+
+		'Build File Contents in Separate Temp Var
+		F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sFileContents,V.Local.sTemp,V.Ambient.NewLine,V.Local.sFileContents)
+	F.Intrinsic.Control.Next(V.Local.iCnt)
+
+	'Create Web_Order Directories
+	F.Intrinsic.String.Build("{0}\WEB_ORDERS",V.Caller.FilesDir,v.Local.sFile)
+	F.Intrinsic.File.CreateDir(v.Local.sFile)
+	F.Intrinsic.String.Build("{0}\WEB_ORDERS\CONVERTED",V.Caller.FilesDir,v.Local.sFile)
+	F.Intrinsic.File.CreateDir(v.Local.sFile)
+	F.Intrinsic.String.Build("{0}\WEB_ORDERS\UPLOADED",V.Caller.FilesDir,v.Local.sFile)
+	F.Intrinsic.File.CreateDir(v.Local.sFile)
+	F.Intrinsic.String.Build("{0}\WEB_ORDERS\WEB_ERRORS",V.Caller.FilesDir,v.Local.sFile)
+	F.Intrinsic.File.CreateDir(v.Local.sFile)
+
+	'String to File containing sFileContents to V.Local.sFile
+	F.Intrinsic.String.Build("{0}\WEB_ORDERS\{1}{2}.txt",V.Caller.FilesDir,V.Caller.CompanyCode,V.Ambient.Time.FormatHHNNSS,V.Local.sFile)
+	F.Intrinsic.String.Build("{0}\WEB_ORDERS\UPLOADED\{1}{2}.txt",V.Caller.FilesDir,V.Caller.CompanyCode,V.Ambient.Time.FormatHHNNSS,V.Local.sMoveFile)
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sFileContents)
+	V.Local.sFileContents.Set("")
+
+	'Call Upload Web Importer ORDUPL (File: GSSPARAM.txt)
+	F.Global.General.CallWrapperSync(50,"ORDUPL")
+
+	'Get last Quote/Sales Order number uploaded
+	F.Intrinsic.Control.If(V.Screen.frmQte!optQte.Value)
+		F.Intrinsic.String.Build("Select Top 1 Quote_No From V_Quote_Header Where Date_Quote = '{0}' And Last_Chg_By = '{1}' And Last_Chg_Pgm = 'ORDUP3' Order By Quote_No Desc;",V.Ambient.Date.PervasiveDate,V.Caller.User,V.Local.sSql)
+		F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSql,V.Local.sOrderNo)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Select Top 1 Order_No From V_Order_Header Where Date_Order = '{0}' And Last_Chg_By = '{1}' And Last_Chg_Pgm = 'ORDUP3' Order By Order_No Desc;",V.Ambient.Date.PervasiveDate,V.Caller.User,V.Local.sSql)
+		F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSql,V.Local.sOrderNo)
+	F.Intrinsic.Control.EndIf
+
+	'Move file if not moved already
+	F.Intrinsic.Control.If(V.Local.sOrderNo,<>,"")
+		F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+		F.Intrinsic.Control.If(V.Local.bExists)
+			F.Intrinsic.File.MoveFile(V.Local.sFile,V.Local.sMoveFile,V.Local.iRet)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	'Schedule WO
+	F.Intrinsic.Control.If(V.Screen.frmQte!optOrd.Value)
+		Gui.frmQte.lblStatus.Caption("Scheduling WO....")
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtLines.RowCount--,1)
+			F.Intrinsic.Math.Add(V.Local.iCnt,1,V.Local.iRet)
+			F.Intrinsic.String.Build("00{0}0",V.Local.iRet,V.Local.sOrderLine)
+			F.Intrinsic.Control.If(V.DataTable.dtLines(V.Local.iCnt).SchedWO!FieldVal)
+				F.Data.DataTable.AddRow("200801","OrderType","O","Order",V.Local.sOrderNo,"Line",V.Local.sOrderLine,"LineFlag","Y")
+			F.Intrinsic.Control.EndIf
+			'Update SO Part
+			F.Intrinsic.String.Build("Update Order_Lines Set Part = '{0}', Location = '' Where Order_No = '{1}' And Record_No = '{2}';",V.DataTable.dtLines(V.Local.iCnt).Router!FieldValTrim,V.Local.sOrderNo,V.Local.sOrderLine,V.Local.sSql)
+			F.ODBC.Connection!con.Execute(V.Local.sSql)
+			'Update Router with Material & Save Router
+			F.Intrinsic.String.Build("Select * From Router_Line Where Router_Type = 'L' And Router = '{0}' Order By Line_Router;",V.DataTable.dtLines(V.Local.iCnt).Router!FieldVal,V.Local.sSql)
+			F.Data.DataTable.CreateFromSQL("dtRouterOrig","con",V.Local.sSql,True)
+			F.Data.DataTable.Clone("dtRouterOrig","dtRouter",True)
+			F.Data.DataTable.Merge("dtRouterOrig","dtRouter",True,3)
+			F.Data.DataTable.Compute("dtRouter","Max(Line_Router)","",V.Local.iRet)
+			F.Intrinsic.Math.Add(V.Local.iRet,V.Global.iWOSeq,V.Local.iLineRtr)
+			F.Data.DataTable.AddRow("dtRouter","Router",V.DataTable.dtLines(V.Local.iCnt).Router!FieldVal,"Router_Suffix","","Router_Type","L","Line_Router",V.Local.iLineRtr.Format000000,"Router_Insert","00","LMO","M","Part_WC_Outside",V.DataTable.dtLines(V.Local.iCnt).Matl!FieldValTrim,"Set_Up",0,"Run_Time",V.DataTable.dtLines(V.Local.iCnt).MatlWeight!FieldVal,"Rate",V.DataTable.dtLines(V.Local.iCnt).MatlPrice!FieldVal,"Frequency",0,"Multiple",0,"Desc_RT_Line",V.DataTable.dtLines(V.Local.iCnt).MatlDesc!FieldValTrim,"UM_Inventory","LB","Overlap",0,"WC_Factor",0,"Actual_WT",V.DataTable.dtLines(V.Local.iCnt).MatlWeight!FieldValTrim,"Run_Time_D6",1,"Lead_Time",0)
+			F.Intrinsic.String.Build("Delete From Router_Line Where Router_Type = 'L' And Router = '{0}';",V.DataTable.dtLines(V.Local.iCnt).Router!FieldVal,V.Local.sSql)
+			F.ODBC.Connection!con.Execute(V.Local.sSql)
+			F.Data.DataTable.SaveToDB("dtRouter","con","Router_Line","Router*!*Router_Suffix*!*Router_Type*!*Line_Router*!*Router_Insert",128)
+			'Create WO
+			F.Intrinsic.Control.CallSub(200801Sync)
+			'Remove Material from Router & Save Router
+			F.Intrinsic.String.Build("Delete From Router_Line Where Router_Type = 'L' And Router = '{0}';",V.DataTable.dtLines(V.Local.iCnt).Router!FieldVal,V.Local.sSql)
+			F.ODBC.Connection!con.Execute(V.Local.sSql)
+			F.Data.DataTable.SaveToDB("dtRouterOrig","con","Router_Line","Router*!*Router_Suffix*!*Router_Type*!*Line_Router*!*Router_Insert",128)
+			'Update SO Part Back
+			F.Intrinsic.String.Build("Update Order_Lines Set Part = '{0}', Location = '{1}' Where Order_No = '{2}' And Record_No = '{3}';",V.DataTable.dtLines(V.Local.iCnt).Part!FieldValTrim,V.DataTable.dtLines(V.Local.iCnt).PartLoc!FieldValTrim,V.Local.sOrderNo,V.Local.sOrderLine,V.Local.sSql)
+			F.ODBC.Connection!con.Execute(V.Local.sSql)
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+		F.Data.DataTable.Close("dtRouterOrig")
+		F.Data.DataTable.Close("dtRouter")
+	F.Intrinsic.Control.EndIf
+	
+	'Call Core Screen to display Quote or Sales Order
+	Gui.frmQte.lblStatus.Caption("Launching Sales Order....")
+	F.Intrinsic.String.ConcatCallWrapperArgs(V.Local.sOrderNo,"O","*!*ZDR*!*",V.Local.sParams)
+	F.Intrinsic.Control.If(V.Screen.frmQte!optQte.Value)
+		F.Global.General.CallWrapperSync(251000,V.Local.sParams)
+	F.Intrinsic.Control.Else
+		F.Global.General.CallWrapperSync(200000,v.Local.sParams)
+	F.Intrinsic.Control.EndIf
+
+	Gui.frmQte.txtCust.Text("")
+	Gui.frmQte.cboCustName.Text("")
+	F.Data.DataTable.DeleteRow("dtLines")
+	F.Intrinsic.Control.CallSub(Clear)
+	Gui.frmQte.lblStatus.Visible(False)
+	Gui.frmQte.cmdProcess.Enabled(True)
+	Gui.frmQte.cmdSave.Enabled(True)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdProcess_Click.End
+
+Program.Sub.cboCustName_LostFocus.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	V.Local.sFilter.Declare
+	V.Local.sSelect.Declare
+	
+	F.Intrinsic.Control.If(V.Screen.frmQte!cboCustName.Text,<>,"")
+		F.Intrinsic.String.Build("Name_Customer = '{0}'",V.Screen.frmQte!cboCustName.Text,V.Local.sFilter)
+		F.Data.DataTable.Select("dtCust",V.Local.sFilter,V.Local.sSelect)
+		F.Intrinsic.Control.If(V.Local.sSelect,<>,"***NORETURN***")
+			Gui.frmQte.txtCust.Text(V.DataTable.dtCust(V.Local.sSelect.Long).Customer!FieldVal)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cboCustName_LostFocus.End
+
+Program.Sub.cboPart_LostFocus.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	V.Local.sFilter.Declare
+	V.Local.sSelect.Declare
+	
+	F.Intrinsic.Control.If(V.Screen.frmQte!cboPart.Text,<>,"")
+		F.Intrinsic.String.Build("Part = '{0}'",V.Screen.frmQte!cboPart.Text,V.Local.sFilter)
+		F.Data.DataTable.Select("dtPart",V.Local.sFilter,V.Local.sSelect)
+		F.Intrinsic.Control.If(V.Local.sSelect,<>,"***NORETURN***")
+			Gui.frmQte.txtPartLoc.Text(V.DataTable.dtPart(V.Local.sSelect.Long).Location!FieldVal)
+			Gui.frmQte.txtPartDesc.Text(V.DataTable.dtPart(V.Local.sSelect.Long).Description!FieldVal)
+			Gui.frmQte.txtPartPL.Text(V.DataTable.dtPart(V.Local.sSelect.Long).Product_Line!FieldVal)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cboPart_LostFocus.End
+
+Program.Sub.cboMatl_LostFocus.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+
+	V.Local.sFilter.Declare
+	V.Local.sSelect.Declare
+	V.Local.sSelect2.Declare
+	
+	F.Intrinsic.Control.If(V.Screen.frmQte!cboMatl.Text,<>,"")
+		F.Intrinsic.String.Build("Part = '{0}'",V.Screen.frmQte!cboMatl.Text,V.Local.sFilter)
+		F.Data.DataTable.Select("dtPart",V.Local.sFilter,V.Local.sSelect)
+		F.Data.DataTable.Select("dtPart2",V.Local.sFilter,V.Local.sSelect2)
+		F.Intrinsic.Control.If(V.Local.sSelect,<>,"***NORETURN***")
+			Gui.frmQte.txtMatlLoc.Text(V.DataTable.dtPart(V.Local.sSelect.Long).Location!FieldVal)
+			Gui.frmQte.txtMatlDesc.Text(V.DataTable.dtPart(V.Local.sSelect.Long).Description!FieldVal)
+			Gui.frmQte.txtMatlPrice.Text(V.DataTable.dtPart(V.Local.sSelect.Long).Amt_Price!FieldVal)
+			Gui.frmQte.txtMatlWeight.Text(V.DataTable.dtPart2(V.Local.sSelect2.Long).Wt_Per_Foot!FieldVal)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cboMatl_LostFocus.End
